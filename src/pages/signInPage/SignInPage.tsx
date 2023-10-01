@@ -1,13 +1,19 @@
-import { useState } from 'react';
 import { useSignIn } from '../../hooks/queryHooks/userQueries.ts';
+import { SubmitHandler, useForm } from 'react-hook-form';
+import { RegisterData } from '../../grTypes/user/internal/internalUserTypes.ts';
+import { USER_REGEX } from '../../constants/regex.ts';
 
 const SignInPage = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<RegisterData>();
 
   const { signIn } = useSignIn();
 
-  const signInBtnHandler = () => {
+  const signInHandler: SubmitHandler<RegisterData> = (data) => {
+    const { email, password } = data;
     const formData = new FormData();
     formData.append('username', email);
     formData.append('password', password);
@@ -18,15 +24,24 @@ const SignInPage = () => {
   return (
     <div>
       <h1>Sign In Page</h1>
-      <div>
-        <input type='email' value={email} onChange={(e) => setEmail(e.target.value)} />
+      <form onSubmit={handleSubmit(signInHandler)}>
+        <input
+          type='email'
+          {...register('email', {
+            required: true,
+            pattern: USER_REGEX.EMAIL,
+          })}
+        />
+        {errors.email && <p>Invalid email format.</p>}
         <input
           type='password'
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          {...register('password', { required: true, pattern: USER_REGEX.PASSWORD })}
         />
-        <button onClick={signInBtnHandler}>Sign In</button>
-      </div>
+        {errors.password && (
+          <p>Password must include an uppercase letter and a special character.</p>
+        )}
+        <button>Sign In</button>
+      </form>
     </div>
   );
 };
