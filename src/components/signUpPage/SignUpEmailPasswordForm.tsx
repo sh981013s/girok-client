@@ -17,7 +17,7 @@ const SignUpEmailPasswordForm = ({
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<RegisterData>();
+  } = useForm<RegisterData>({ mode: 'onBlur' });
 
   const { register: signUp } = useSignUp({
     setIsValidationEmail: setIsValCodeSent,

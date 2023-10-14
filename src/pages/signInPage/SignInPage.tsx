@@ -8,7 +8,7 @@ const SignInPage = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<RegisterData>();
+  } = useForm<RegisterData>({ mode: 'onBlur' });
 
   const { signIn } = useSignIn();
 

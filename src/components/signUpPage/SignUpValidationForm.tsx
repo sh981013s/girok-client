@@ -11,7 +11,7 @@ const SignUpValidationForm = ({ email }: SignUpValidationFormProps) => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<VerificationData>();
+  } = useForm<VerificationData>({ mode: 'onBlur' });
 
   const { submitVerificationCode } = useValidateRegisterCode();
 
