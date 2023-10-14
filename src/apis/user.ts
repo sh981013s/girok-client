@@ -1,6 +1,7 @@
 import client from './client.ts';
 import {
   SignInReq,
+  SignInRes,
   SignUpReq,
   SignUpValidationReq,
 } from '../grTypes/user/external/externalUserTypes.ts';
@@ -14,5 +15,5 @@ export const postRegisterVerification = (payload: SignUpValidationReq) => {
 };
 
 export const postSignIn = (payload: SignInReq) => {
-  return client.post('auth/login', payload);
+  return client.post<SignInRes>('auth/login', payload);
 };
