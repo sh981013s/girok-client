@@ -10,7 +10,7 @@ export const postRegister = (payload: SignUpReq) => {
 };
 
 export const postRegisterVerification = (payload: SignUpValidationReq) => {
-  return client.post('auth/register/verification_code', payload);
+  return client.post('auth/verifications', payload);
 };
 
 export const postSignIn = (payload: SignInReq) => {
