@@ -1,9 +1,11 @@
 import { Dispatch, SetStateAction } from 'react';
 
-export type SignUpReq = {
+type UserBase = {
   email: string;
   password: string;
 };
+
+export type SignUpReq = UserBase;
 
 export type SignUpValidationReq = {
   email: string;
@@ -15,4 +17,4 @@ export type UseRegisterPrams = {
   setEmail: Dispatch<SetStateAction<string>>;
 };
 
-export type SignInReq = FormData;
+export type SignInReq = UserBase;

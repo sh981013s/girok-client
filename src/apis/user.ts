@@ -6,15 +6,13 @@ import {
 } from '../grTypes/user/external/externalUserTypes.ts';
 
 export const postRegister = (payload: SignUpReq) => {
-  return client.post('/register', payload);
+  return client.post('auth/register', payload);
 };
 
 export const postRegisterVerification = (payload: SignUpValidationReq) => {
-  return client.post('/register/verification_code', payload);
+  return client.post('auth/register/verification_code', payload);
 };
 
 export const postSignIn = (payload: SignInReq) => {
-  return client.post('/login', payload, {
-    headers: { 'Content-Type': 'multipart/form-data' },
-  });
+  return client.post('auth/login', payload);
 };

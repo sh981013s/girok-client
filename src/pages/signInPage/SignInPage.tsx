@@ -14,11 +14,8 @@ const SignInPage = () => {
 
   const signInHandler: SubmitHandler<RegisterData> = (data) => {
     const { email, password } = data;
-    const formData = new FormData();
-    formData.append('username', email);
-    formData.append('password', password);
 
-    signIn(formData);
+    signIn({ email, password });
   };
 
   return (
