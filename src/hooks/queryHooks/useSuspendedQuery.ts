@@ -5,7 +5,7 @@ import {
   UseQueryOptions,
   UseQueryResult,
 } from '@tanstack/react-query';
-import { parseQueryArgs } from '../../utls/parseQueryArgs.ts';
+import { parseQueryArgs } from '../../utils/parseQueryArgs.ts';
 
 type UseQueryResultWithoutStatus = Omit<UseQueryResult, 'status'>;
 
