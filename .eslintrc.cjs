@@ -4,8 +4,12 @@ module.exports = {
   extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:react-hooks/recommended', 'plugin:react/recommended', 'plugin:prettier/recommended'],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
-  plugins: ['react-refresh', 'react', 'prettier'],
+  plugins: ['react-refresh', 'react', 'prettier', 'import'],
   rules: {
+    "import/order": ["error", {
+      "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
+      "newlines-between": "always"
+    }],
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },
@@ -62,7 +66,6 @@ module.exports = {
     'react/jsx-no-constructed-context-values': 'off',
     'react/jsx-props-no-spreading': 'off',
     'import/no-unresolved': 'off',
-    'import/order': 'off',
     'no-nested-ternary': 'off',
     'react/jsx-no-useless-fragment': 'off',
     'react/no-unescaped-entities': 'off',
