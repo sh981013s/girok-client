@@ -1,7 +1,8 @@
-import { USER_REGEX } from '../../constants/regex.ts';
-import { useValidateRegisterCode } from '../../hooks/queryHooks/userQueries.ts';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { VerificationData } from '../../grTypes/user/internal/internalUserTypes.ts';
+
+import { VerificationData } from '@/grTypes/user/internal/internalUserTypes.ts';
+import { useValidateRegisterCode } from '@/hooks/queryHooks/userQueries.ts';
+import { USER_REGEX } from '@/constants/regex.ts';
 
 type SignUpValidationFormProps = {
   email: string;

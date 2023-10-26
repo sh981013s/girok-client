@@ -1,5 +1,6 @@
 import { QueryFunction, QueryKey, QueryOptions } from '@tanstack/react-query';
-import { isQueryKey } from './isQueryKey.ts';
+
+import { isQueryKey } from '@/utils/queryUtils/isQueryKey.ts';
 
 export function parseQueryArgs<
   TOptions extends QueryOptions<any, any, any, TQueryKey>,

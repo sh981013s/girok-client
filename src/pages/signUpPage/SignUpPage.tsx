@@ -1,13 +1,11 @@
 import { useState } from 'react';
 
-import SignUpEmailPasswordForm from '../../components/signUpPage/SignUpEmailPasswordForm.tsx';
-import SignUpValidationForm from '../../components/signUpPage/SignUpValidationForm.tsx';
+import SignUpValidationForm from '@/components/signUpPage/SignUpValidationForm.tsx';
+import SignUpEmailPasswordForm from '@/components/signUpPage/SignUpEmailPasswordForm.tsx';
 
 const SignUpPage = () => {
   const [isValCodeSent, setIsValCodeSent] = useState(false);
   const [email, setEmail] = useState('');
-
-  console.log(isValCodeSent, 'iVV');
 
   return (
     <>

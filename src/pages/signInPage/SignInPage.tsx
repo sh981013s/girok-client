@@ -1,7 +1,8 @@
-import { useSignIn } from '../../hooks/queryHooks/userQueries.ts';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { RegisterData } from '../../grTypes/user/internal/internalUserTypes.ts';
-import { USER_REGEX } from '../../constants/regex.ts';
+
+import { useSignIn } from '@/hooks/queryHooks/userQueries.ts';
+import { RegisterData } from '@/grTypes/user/internal/internalUserTypes.ts';
+import { USER_REGEX } from '@/constants/regex.ts';
 
 const SignInPage = () => {
   const {

@@ -5,8 +5,10 @@ export const DayContainer = styled.div`
   align-items: center;
   justify-content: center;
 
-  width: 40px;
+  box-sizing: border-box;
+  width: 100%;
   height: 40px;
+  margin: 0;
 
   border: 1px solid #ccc;
 `;

@@ -1,14 +1,15 @@
 import { useMutation } from '@tanstack/react-query';
-import { postRegister, postRegisterVerification, postSignIn } from '../../apis/user.ts';
-
 import { useNavigate } from 'react-router-dom';
-import ROUTES from '../../constants/routes.ts';
+
+import { postRegister, postRegisterVerification, postSignIn } from '../../apis/user.ts';
 import {
   SignInReq,
   SignUpReq,
   SignUpValidationReq,
   UseRegisterPrams,
 } from '../../grTypes/user/external/externalUserTypes.ts';
+
+import ROUTES from '@/constants/routes.ts';
 
 export const useSignUp = ({ setIsValidationEmail, setEmail }: UseRegisterPrams) => {
   const { mutate } = useMutation((payload: SignUpReq) => postRegister(payload), {
