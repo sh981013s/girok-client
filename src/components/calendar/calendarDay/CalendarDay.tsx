@@ -1,13 +1,13 @@
-import * as S from './CalenderDay.styles.ts';
+import * as S from './CalendarDay.styles.ts';
 
 type CalenderDayProps = {
   date: Date;
 };
 
-const CalenderDay = ({ date }: CalenderDayProps) => {
+const CalendarDay = ({ date }: CalenderDayProps) => {
   const day = date.getDate();
 
   return <S.DayContainer>{day}</S.DayContainer>;
 };
 
-export default CalenderDay;
+export default CalendarDay;

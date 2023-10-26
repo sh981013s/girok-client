@@ -5,7 +5,7 @@ type CalenderStore = {
   selectDate: (date: Date) => void;
 };
 
-export const useCalenderStore = create<CalenderStore>((set) => ({
+export const useCalendarStore = create<CalenderStore>((set) => ({
   selectedDate: new Date(),
   selectDate: (date) => set({ selectedDate: date }),
 }));
