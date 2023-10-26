@@ -13,7 +13,7 @@ const App = () => {
         <Route path={ROUTES.MAIN_PAGE} element={<MainPage />} />
         <Route path={ROUTES.SIGN_UP} element={<SignUpPage />} />
         <Route path={ROUTES.SIGN_IN} element={<SignInPage />} />
-        <Route path={ROUTES.CALENDER} element={<CalendarPage />} />
+        <Route path={ROUTES.CALENDAR} element={<CalendarPage />} />
       </Routes>
     </BrowserRouter>
   );
