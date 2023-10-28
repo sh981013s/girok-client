@@ -1,14 +1,12 @@
-import { useValidateRegisterCode } from '../../hooks/queryHooks/userQueries.ts';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { VerificationData } from '../../grTypes/user/internal/internalUserTypes.ts';
+
+import { VerificationData } from '@/grTypes/user/internal/internalUserTypes.ts';
+import { useValidateRegisterCode } from '@/hooks/queryHooks/userQueries.ts';
+import { USER_REGEX } from '@/constants/regex.ts';
 
 type SignUpValidationFormProps = {
   email: string;
 };
-
-/* TODO
-  1. validation 적용
- */
 const SignUpValidationForm = ({ email }: SignUpValidationFormProps) => {
   const {
     register,
@@ -29,9 +27,10 @@ const SignUpValidationForm = ({ email }: SignUpValidationFormProps) => {
       <span>Enter your validation code</span>
       <form onSubmit={handleSubmit(submitRegisterBtnHandler)}>
         <input
-          type='string'
+          type='number'
           {...register('verificationCode', {
             required: true,
+            pattern: USER_REGEX.VERIFICATION_CODE,
           })}
         />
         {errors.verificationCode && <p>Invalid verification code.</p>}

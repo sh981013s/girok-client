@@ -1,8 +1,10 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import SignUpPage from './pages/signUpPage/SignUpPage.tsx';
-import MainPage from './pages/mainPage/MainPage.tsx';
-import ROUTES from './constants/routes.ts';
-import SignInPage from './pages/signInPage/SignInPage.tsx';
+
+import ROUTES from '@/constants/routes.ts';
+import MainPage from '@/pages/mainPage/MainPage.tsx';
+import SignUpPage from '@/pages/signUpPage/SignUpPage.tsx';
+import SignInPage from '@/pages/signInPage/SignInPage.tsx';
+import CalendarPage from '@/pages/calendarPage/CalendarPage.tsx';
 
 const App = () => {
   return (
@@ -11,6 +13,7 @@ const App = () => {
         <Route path={ROUTES.MAIN_PAGE} element={<MainPage />} />
         <Route path={ROUTES.SIGN_UP} element={<SignUpPage />} />
         <Route path={ROUTES.SIGN_IN} element={<SignInPage />} />
+        <Route path={ROUTES.CALENDAR} element={<CalendarPage />} />
       </Routes>
     </BrowserRouter>
   );

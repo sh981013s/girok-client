@@ -1,8 +1,9 @@
-import { USER_REGEX } from '../../constants/regex.ts';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { useSignUp } from '../../hooks/queryHooks/userQueries.ts';
 import { Dispatch, SetStateAction } from 'react';
-import { RegisterData } from '../../grTypes/user/internal/internalUserTypes.ts';
+
+import { RegisterData } from '@/grTypes/user/internal/internalUserTypes.ts';
+import { useSignUp } from '@/hooks/queryHooks/userQueries.ts';
+import { USER_REGEX } from '@/constants/regex.ts';
 
 type SignUpEmailPasswordFormProps = {
   setIsValCodeSent: Dispatch<SetStateAction<boolean>>;
