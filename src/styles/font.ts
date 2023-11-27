@@ -3,6 +3,7 @@ import { css } from 'styled-components';
 interface Font {
   size: number;
   weight: number;
+  spacing: number;
 }
 
 /*
@@ -14,14 +15,16 @@ interface Font {
         ${font({
             size: 1.6,
             weight: 700,
+            spacing: -1,
         })}
     `;
  */
 
-const font = ({ size, weight }: Font) => {
+const font = ({ size, weight, spacing }: Font) => {
   return css`
     font-size: ${size}rem;
     font-weight: ${weight};
+    letter-spacing: ${spacing}%;
   `;
 };
 
