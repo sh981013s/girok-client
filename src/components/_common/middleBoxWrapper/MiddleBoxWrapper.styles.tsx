@@ -21,10 +21,13 @@ export const MiddleCard = styled.div`
 export const Desc = styled.p`
   ${({ theme }) => theme.fonts.body2};
   margin-top: 2.4rem;
+  color: ${({ theme }) => theme.colors.gray3};
   text-align: center;
 `;
 
 export const SignInHighlight = styled.span`
+  ${({ theme }) => theme.fonts.body1};
+  color: ${({ theme }) => theme.colors.black};
   font-weight: bold;
   cursor: pointer;
 
