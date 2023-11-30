@@ -12,9 +12,9 @@ const Navbar = () => {
   };
 
   return (
-    <div>
+    <S.NavBarContainer>
       <S.Logo src={logo} alt='girok logo' onClick={handleLogoClick} />
-    </div>
+    </S.NavBarContainer>
   );
 };
 
