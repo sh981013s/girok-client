@@ -8,5 +8,5 @@ export const Layout = styled.div`
 `;
 
 export const ChildrenLayout = styled.div`
-  min-height: 100vh;
+  min-height: 93vh;
 `;

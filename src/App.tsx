@@ -9,6 +9,7 @@ import CalendarPage from '@/pages/calendarPage/CalendarPage.tsx';
 import PageLayout from '@/components/_common/pageLayout/PageLayout.tsx';
 import theme from '@/styles/theme.ts';
 import GlobalStyle from '@/styles/GlobalStyle.tsx';
+import MiddleBoxWrapper from '@/components/_common/middleBoxWrapper/MiddleBoxWrapper.tsx';
 
 const App = () => {
   return (
@@ -18,8 +19,22 @@ const App = () => {
         <PageLayout>
           <Routes>
             <Route path={ROUTES.MAIN_PAGE} element={<MainPage />} />
-            <Route path={ROUTES.SIGN_UP} element={<SignUpPage />} />
-            <Route path={ROUTES.SIGN_IN} element={<SignInPage />} />
+            <Route
+              path={ROUTES.SIGN_UP}
+              element={
+                <MiddleBoxWrapper isSignUp={true}>
+                  <SignUpPage />
+                </MiddleBoxWrapper>
+              }
+            />
+            <Route
+              path={ROUTES.SIGN_IN}
+              element={
+                <MiddleBoxWrapper isSignUp={false}>
+                  <SignInPage />
+                </MiddleBoxWrapper>
+              }
+            />
             <Route
               path={ROUTES.CALENDAR}
               element={<CalendarPage />}

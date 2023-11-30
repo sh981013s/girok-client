@@ -20,6 +20,11 @@ const theme = {
     body2: font({ size: 1.6, weight: 400, spacing: -1 }),
     smallBody1: font({ size: 1.4, weight: 400, spacing: -1 }),
   },
+
+  shadows: {
+    middleBox:
+      '0rem 0.4rem 2.7rem rgba(0, 0, 0, 0.07), 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.07)',
+  },
 } as const;
 
 export default theme;

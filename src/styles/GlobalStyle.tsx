@@ -7,7 +7,8 @@ import BREAK_POINTS from '@/constants/breakPoints.ts';
 const GlobalStyle = createGlobalStyle`
   /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
   html {
-    box-sizing: border-box
+    box-sizing: border-box;
+    background: ${({ theme }) => theme.colors.white};
   }
 
   blockquote, body, dd, dl, dt, fieldset, figure, h1, h2, h3, h4, h5, h6, hr, html, iframe, legend, li, ol, p, pre, textarea, ul {
@@ -85,7 +86,6 @@ const GlobalStyle = createGlobalStyle`
   * {
     scrollbar-width: none;
     font-family: 'Pretendard-Regular' , sans-serif;
-    white-space: pre-wrap;
 
 
     &::-webkit-scrollbar {
