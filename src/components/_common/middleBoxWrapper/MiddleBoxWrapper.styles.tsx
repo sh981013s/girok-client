@@ -10,8 +10,9 @@ export const PageContainer = styled.div`
 `;
 
 export const MiddleCard = styled.div`
-  width: 48rem;
-  height: 56rem;
+  width: 30rem;
+  height: 35rem;
+  padding: 8rem 3.5rem;
 
   background: ${({ theme }) => theme.colors.white};
   border-radius: 8px;

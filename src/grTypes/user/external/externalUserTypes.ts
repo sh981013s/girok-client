@@ -1,14 +1,27 @@
 import { Dispatch, SetStateAction } from 'react';
 
+type UserEmail = string;
+
 type UserBase = {
-  email: string;
+  email: UserEmail;
   password: string;
 };
 
-export type SignUpReq = UserBase;
+export type EmailReq = {
+  email: UserEmail;
+};
+
+export type VerCodeReq = {
+  email: UserEmail;
+  verification_code: string;
+};
+
+export type SignUpReq = VerCodeReq & {
+  password: string;
+};
 
 export type SignUpValidationReq = {
-  email: string;
+  email: UserEmail;
   verification_code: string;
 };
 

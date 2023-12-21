@@ -15,15 +15,19 @@ const theme = {
   },
 
   fonts: {
-    headline1: font({ size: 3.2, weight: 500, spacing: -2 }),
-    body1: font({ size: 1.6, weight: 500, spacing: -1 }),
-    body2: font({ size: 1.6, weight: 400, spacing: -1 }),
-    smallBody1: font({ size: 1.4, weight: 400, spacing: -1 }),
+    headline1: font({ size: 2, weight: 500, spacing: -0.02 }),
+    body1: font({ size: 1, weight: 500, spacing: -0.01 }),
+    body2: font({ size: 1, weight: 400, spacing: -0.01 }),
+    smallBody1: font({ size: 0.875, weight: 400, spacing: -0.01 }),
   },
 
   shadows: {
     middleBox:
       '0rem 0.4rem 2.7rem rgba(0, 0, 0, 0.07), 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.07)',
+  },
+
+  borderRadius: {
+    authInput: 2.5,
   },
 } as const;
 

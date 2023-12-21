@@ -68,18 +68,18 @@ const GlobalStyle = createGlobalStyle`
   }
 
   :root {
-    font-size: 62.5%; /* 1rem = 10px for all devices */
+    font-size: 100%; /* 1rem = 16px for all devices */
 
     @media (max-width: ${BREAK_POINTS.MOBILE}px) {
-      font-size: 62.5%; /* 1rem = 10px for mobile devices */
+      font-size: 100%; /* 1rem = 16px for mobile devices */
     }
 
     @media (max-width: ${BREAK_POINTS.TABLET}px) {
-      font-size: 62.5%; /* 1rem = 10px for tablet devices */
+      font-size: 100%; /* 1rem = 16px for tablet devices */
     }
 
     @media (min-width: ${BREAK_POINTS.DESKTOP}px) {
-      font-size: 62.5%; /* 1rem = 10px for desktop devices */
+      font-size: 100%; /* 1rem = 16px for desktop devices */
     }
   }
 

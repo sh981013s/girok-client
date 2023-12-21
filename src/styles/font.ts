@@ -24,7 +24,7 @@ const font = ({ size, weight, spacing }: Font) => {
   return css`
     font-size: ${size}rem;
     font-weight: ${weight};
-    letter-spacing: ${spacing}%;
+    letter-spacing: ${spacing}rem;
   `;
 };
 
